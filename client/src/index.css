@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-paper font-sans text-ink antialiased; }
+  :focus-visible { outline: 2px solid theme('colors.focus'); outline-offset: 2px; }
+  ::selection { @apply bg-ink text-paper; }
+}
+
+@layer components {
+  .btn { @apply inline-flex h-11 items-center justify-center rounded bg-ink px-5 font-medium text-paper hover:bg-black disabled:cursor-not-allowed disabled:opacity-45; }
+  .btn-sm { @apply h-9 px-4 text-sm; }
+  .btn-outline { @apply inline-flex h-11 items-center justify-center rounded border border-edge bg-surface px-5 font-medium text-ink hover:border-ink disabled:cursor-not-allowed disabled:opacity-45; }
+  .btn-quiet { @apply inline-flex h-9 items-center rounded px-3 text-sm font-medium text-ink-soft hover:bg-ink/5 hover:text-ink; }
+}
